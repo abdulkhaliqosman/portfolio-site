@@ -1,0 +1,44 @@
+import React, { Component } from 'react';
+
+import { Link } from "react-router-dom";
+
+export default class Header extends Component {
+
+    render() {
+        return (
+            <header className="App-header">
+                <nav className="App-navbar App-container-width navbar navbar-expand-lg mx-auto">
+                    <div className="App-navbar-brand navbar-brand">
+                        <Link to="/" className="App-navbar-brand-item">Aykay.io</Link>
+                    </div>
+
+                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul className="navbar-nav mr-auto">
+                            <li className="ak-nav-item navbar-item">
+                                <Link to="/projects" className="nav-link">Projects</Link>
+                            </li>
+                            <li className="ak-nav-item navbar-item">
+                                <a className="nav-link" rel="noopener noreferrer" target="_blank" href="https://dev.to/abdulkhaliqosman">Blog</a>
+                            </li>
+                            <li className="ak-nav-item navbar-item">
+                                <Link to="/contact" className="nav-link">Contact</Link>
+                            </li>
+                        </ul>
+                        <ul className="navbar-nav justify-content-end">
+                            <li className="ak-nav-item navbar-item">
+                                <a className="nav-link" href="https://www.linkedin.com/in/abdul-khaliq-bin-osman/"><i className="fa fa-linkedin-square fa-3"></i></a>
+                            </li>
+                            <li className="ak-nav-item navbar-item">
+                                <a className="nav-link" href="https://github.com/abdulkhaliqosman/"><i className="fa fa-github-square fa-2"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+        );
+    }
+};
